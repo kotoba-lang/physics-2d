@@ -4,7 +4,7 @@
 
 (deftest namespace-loads
   (testing "the restored CLJC namespace loads"
-    (is (some? (the-ns 'physics_2d)))))
+    (is (some? (find-ns 'physics_2d)))))
 
 ;; Ported 1:1 from kami-physics-2d/src/lib.rs `mod tests`:
 ;;   #[test] fn test_circle_collision()
