@@ -37,7 +37,7 @@
   (:require [clojure.test :refer [deftest is testing]]
             [kotoba.physics.contract :as contract]
             [physics-2d.backend :as backend]
-            [physics_2d :as engine]))
+            [physics-2d :as engine]))
 
 (def ^:private tight 1e-9)
 (def ^:private loose 1e-6)
