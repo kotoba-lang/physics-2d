@@ -4,7 +4,7 @@
   (`kotoba.physics.contract/step` + `physics-2d.backend/backend`) rather than
   calling the bare engine directly.
 
-  Honest scope note (kami-engine physics-2d integration, 2607121600-ish ADR):
+  Honest scope note (kami-engine physics-2d integration, 2607122200 ADR):
   `kotoba-lang/kami-engine-cae-solver`'s `cae.industrial` reference solvers
   (duct/ventilation CFD, axial-bar/cantilever-beam FEM static
   deformation+stress+first-mode+fatigue, welding/casting/rolling process
