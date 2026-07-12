@@ -1,10 +1,10 @@
-(ns physics_2d-test
+(ns physics-2d-test
   (:require [clojure.test :refer [deftest is testing]]
-            [physics_2d :as p]))
+            [physics-2d :as p]))
 
 (deftest namespace-loads
   (testing "the restored CLJC namespace loads"
-    (is (some? (find-ns 'physics_2d)))))
+    (is (some? (find-ns 'physics-2d)))))
 
 ;; Ported 1:1 from kami-physics-2d/src/lib.rs `mod tests`:
 ;;   #[test] fn test_circle_collision()

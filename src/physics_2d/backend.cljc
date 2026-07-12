@@ -1,7 +1,7 @@
 (ns physics-2d.backend
   "Adapter from the unified Kotoba scene contract to the pure 2D engine."
   (:require [kotoba.physics.contract :as contract]
-            [physics_2d :as engine]))
+            [physics-2d :as engine]))
 
 (def backend-id :kotoba/rigid-body-2d)
 
