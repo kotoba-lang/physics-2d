@@ -1,4 +1,4 @@
-(ns physics_2d
+(ns physics-2d
   "Zero-dep portable CLJC 2D physics engine.
 
   Restored from the legacy `kami-engine/kami-physics-2d` Rust crate
