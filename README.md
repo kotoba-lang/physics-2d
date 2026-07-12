@@ -22,3 +22,10 @@ All original Rust `#[test]`s are ported 1:1 to `test/physics_2d_test.cljc`
 ```bash
 clojure -M:test
 ```
+## Unified Kotoba backend
+
+`physics-2d.backend/backend` implements the shared `kotoba.physics.contract`
+as a `:realtime` backend. Kami Engine and Network Isekai can now pass the same
+immutable SI-unit scene envelope used by CAE orchestration. The adapter keeps
+entity IDs stable, returns contacts by entity ID, validates frame time and
+never presents this impulse approximation as a high-fidelity CAE result.
