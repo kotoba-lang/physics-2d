@@ -2,7 +2,7 @@
   (:require [clojure.test :refer [deftest is testing]]
             [kotoba.physics.contract :as contract]
             [physics-2d.backend :as backend]
-            [physics_2d :as engine]))
+            [physics-2d :as engine]))
 
 (defn body [id x mass]
   {:entity/id id :transform/position [x 0.0] :physics/velocity [0.0 0.0]
