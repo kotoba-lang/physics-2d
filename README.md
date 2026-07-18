@@ -29,3 +29,18 @@ as a `:realtime` backend. Kami Engine and Network Isekai can now pass the same
 immutable SI-unit scene envelope used by CAE orchestration. The adapter keeps
 entity IDs stable, returns contacts by entity ID, validates frame time and
 never presents this impulse approximation as a high-fidelity CAE result.
+
+## Stairs (diagonal traversable zones)
+
+`physics-2d.stairs` adds Castlevania-style diagonal staircases for 2D
+side-scrollers (`network-isekai`), as a coarser rectangular "zone" a game loop
+queries separately from the collider/body world — it does not participate in
+`world-step`. Public API: `make-stair-zone`, `point-in-zone?`,
+`aabb-overlaps-zone?`, `slope-y-at`, `resolve-stair-movement`. A zone is
+`{:x :y :width :height :dir}` (`:x`/`:y` = bottom-left corner, +y is UP,
+matching `physics-2d`'s own gravity convention); `:dir` is `:up-right`
+(walking +x climbs) or `:up-left` (walking +x descends). While an entity's
+AABB overlaps a zone, call `resolve-stair-movement` each frame instead of
+`world-step`'s gravity integration; it snaps the entity's y to the slope
+surface and reports `:on-stairs?` so the caller knows when to resume normal
+platforming physics.
